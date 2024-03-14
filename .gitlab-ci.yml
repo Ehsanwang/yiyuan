@@ -1,0 +1,35 @@
+image: ubuntu
+image: python
+
+before_script:
+    - echo $CI_COMMIT_REF_NAME
+    - mkdir -p ~/.ssh  # 当前用户下创建.ssh文件夹
+    - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa  # 当前用户下创建id_rsa私钥，私钥为网页端Settings->CI/CD->Variables手动添加内容
+    - echo "$KNOWN_HOSTS" > ~/.ssh/known_hosts  # 添加Docker内部的.ssh/konwn_hosts的的内容到Settings->CI/CD->Variables
+    - chmod 400 ~/.ssh/id_rsa ~/.ssh/known_hosts  # 赋予权限
+    - git config --global user.email "flynn.chen@quectel.com"  # 设置邮箱
+    - git config --global user.name "robot"   # 设置名称
+    - git init  # 初始化git
+    - git clone ssh://git@stgit.quectel.com:222/5G-SDX55/Standard.git  # 克隆分支
+    - pip install flake8 -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+stages:
+    - Static Analysis
+    - Version Update
+
+flake8:
+    stage: Static Analysis
+    script:
+        - cd Standard
+        - git checkout $CI_COMMIT_REF_NAME  # 切换为当前提交的分支
+        - flake8
+
+version:
+    stage: Version Update
+    script:
+        - cd Standard/lib/Communal  # 切换到Communal文件夹
+        - git checkout $CI_COMMIT_REF_NAME  # 切换为当前提交的分支
+        - echo {\"date\":\"`TZ=":Asia/Shanghai" date +%Y-%m-%d-%H-%M-%S`\", \"commit_id\":\"$CI_COMMIT_SHA\"} > version.json  # 进入当前的文件夹名称
+        - git add version.json && git commit -m "modify version.json [skip ci]" && git push  # 添加push并跳过CI
+    only:
+        - schedules

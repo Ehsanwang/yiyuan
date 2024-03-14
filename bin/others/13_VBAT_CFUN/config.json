@@ -1,0 +1,15 @@
+{
+    "comment_at_port": "'COM5'  # 定义QUECTEL USB AT口端口号",
+    "comment_dm_port": "'COM5'  # 定义QUECTEL USB DM口端口号",
+    "comment_power_port": "'COM5'  # 定义程控电源的端口号",
+    "comment_evb": "'EVB'  # RG默认evb参数为EVB，RM默认evb参数为M.2",
+    "comment_voltage": "'3.8'  # 基准的电压",
+
+    "at_port": "COM7",
+    "dm_port": "COM8",
+    "power_port": "COM13",
+    "evb": "EVB",
+    "voltage": "8",
+    "curr": "3"
+}
+

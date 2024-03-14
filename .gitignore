@@ -1,0 +1,5 @@
+/venv/
+/.idea/
+/lib/*/__pycache__
+/bin/internal/*/20*
+*.txt

@@ -1,0 +1,21 @@
+{
+    "comment_uart_port": "'COM3'  # 定义MAIN UART串口号, 用于控制DTR引脚电平或检测URC信息",
+    "comment_debug_port": "'COM4'  # 定义DEBUG UART串口号, 用于控制DTR引脚电平或检测URC信息",
+    "comment_at_port": "'COM5'  # 定义QUECTEL USB AT口端口号",
+    "comment_dm_port": "'COM5'  # 定义QUECTEL USB DM口端口号",
+    "comment_revision": "'RG801HEAAAR01A03M8G'  # 设置Revision版本号，填写ATI+CSUB查询的Revision部分",
+    "comment_sub_edition": "'V06'  # 设置SubEdition版本号，填写ATI+CSUB查询的SubEdition部分",
+    "comment_imei": "'864430010001091'  # 模块测试前配置IMEI号 AT+EGMR=0,7",
+    "comment_dtr_on_time": "0.5  # 定义POWERKEY开机脉冲时间，默认0.5S(500ms)",
+    "comment_dtr_off_time": "0.5  # 定义POWERKEY关机脉冲时间，默认0.8S(800ms)",
+
+    "uart_port": "COM3",
+    "debug_port": "COM4",
+    "at_port": "COM73",
+    "dm_port": "COM72",
+    "revision": "RG500QEAAAR10A03M4G",
+    "sub_edition": "V01",
+    "imei": "866897040152102",
+    "dtr_on_time": "0.5",
+    "dtr_off_time": "0.8"
+}

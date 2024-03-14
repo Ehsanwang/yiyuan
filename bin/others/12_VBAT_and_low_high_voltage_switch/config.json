@@ -1,0 +1,32 @@
+{
+    "comment_mode": "'1'  # 1：通电断电测试  0：高低电压测试",
+    "comment_uart_port": "'COM4'  # 定义MIAN UART串口号, 用于控制DTR引脚电平或检测URC信息，可以为空" ,
+    "comment_debug_port": "'COM4'  # 定义DEBUG UART串口号, 用于控制DTR引脚电平或检测URC信息，可以为空" ,
+    "comment_at_port": "'COM5'  # 定义QUECTEL USB AT口端口号",
+    "comment_dm_port": "'COM5'  # 定义QUECTEL USB DM口端口号",
+    "comment_power_port": "'COM5'  # 定义程控电源的端口号",
+    "comment_evb": "'EVB'  # RG默认evb参数为EVB，RM默认evb参数为M.2",
+    "comment_voltage": "'3.8'  # 基准的电压",
+    "comment_power_on_time": "'100'  # mode参数为1时需要设置的参数，从通电到断电的时间",
+    "comment_power_off_time": "'10'  # mode参数为1时需要设置的参数，断电后到下次上电的时间",
+    "comment_voltage_offset": "'0.1'  # mode参数为0时需要设置的参数，电压偏移量，0.1则为10%",
+    "comment_high_low_volt_last_time": "'300'  # mode参数为0时需要设置的参数，高压低压的切换时间",
+    "comment_runtimes_temp": "'0'  # 设置脚本运行次数，默认0是不限次数，如果设置1000则脚本运行1000个runtimes后自动结束",
+    "comment_timing": "'0'  # 设置脚本的运行时间，单位为h，默认0是不限制时间，如果设置12则脚本运行12小时后自动结束",
+
+    "mode": "1",
+    "uart_port": "COM3",
+    "debug_port": "COM4",
+    "at_port": "COM1",
+    "dm_port": "COM1",
+    "power_port": "COM1",
+    "evb": "EVB",
+    "voltage": "3.8",
+    "power_on_time": "100",
+    "power_off_time": "10",
+    "voltage_offset": "0.1",
+    "high_low_volt_last_time": "300",
+    "runtimes_temp": "0",
+    "timing": "0"
+}
+

@@ -1,0 +1,13 @@
+{
+  "at_port": "COM14",
+  "cpin_flag": "False",
+  "debug_port": "COM15",
+  "dm_port": "COM13",
+  "imei": "869710030002905",
+  "restart_mode": "5",
+  "revision": "RG500QEAAAR01A01M4G_BETA_20200518H",
+  "runtimes_temp": "0",
+  "sub_edition": "V01",
+  "timing": "0",
+  "uart_port": "COM10"
+}
